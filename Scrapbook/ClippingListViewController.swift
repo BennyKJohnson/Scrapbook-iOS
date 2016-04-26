@@ -18,6 +18,9 @@ class ClippingListViewController: UITableViewController, UINavigationControllerD
         }
     }
     
+    
+    let dateFormmater = NSDateFormatter()
+    
     var clippings: [Clipping] = []
     var searchController: UISearchController!
     
@@ -40,7 +43,11 @@ class ClippingListViewController: UITableViewController, UINavigationControllerD
         tableView.tableHeaderView = searchController.searchBar
 
         definesPresentationContext = true
-        
+        dateFormmater.dateStyle = .MediumStyle
+
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 84.0; // set to whatever your "average" cell height is
+
     }
     
    
@@ -76,11 +83,12 @@ class ClippingListViewController: UITableViewController, UINavigationControllerD
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ClippingCell
         let clipping = clippings[indexPath.row]
         
-        cell.textLabel?.text = clipping.notes
-        cell.imageView?.image = clipping.image
+        cell.titleLabel.text = clipping.notes
+        cell.subtitleLabel.text = "\(dateFormmater.stringFromDate(clipping.createdAt))"
+        cell.clippingImageView.image = clipping.image
 
         return cell
     }
