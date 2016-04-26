@@ -8,6 +8,8 @@
 
 import Foundation
 import CoreData
+import UIKit
+
 class Scrapbook {
     
     let managedObjectContext: NSManagedObjectContext
@@ -25,6 +27,13 @@ class Scrapbook {
         }
     }
     
+    func populateWithSampleData() {
+        
+        createCollectionWithName("A")
+        createCollectionWithName("B")
+        
+    }
+    
     func createCollectionWithName(name: String) -> Collection {
         // Create Collection
         let collectionEntity = NSEntityDescription.entityForName("Collection", inManagedObjectContext: managedObjectContext)!
@@ -32,6 +41,9 @@ class Scrapbook {
         let collection = Collection(entity: collectionEntity, insertIntoManagedObjectContext: managedObjectContext)
         collection.name = name
         managedObjectContext.insertObject(collection)
+        
+        save()
+        
         return collection
     }
     
@@ -68,7 +80,23 @@ class Scrapbook {
         }
     }
     
-    func createClipping(notes: String, imageURL: String) -> Clipping {
+    func createClipping(notes: String, image: UIImage) -> Clipping {
+        let clippingEntity = NSEntityDescription.entityForName("Clipping", inManagedObjectContext: managedObjectContext)!
+        
+        let clipping = Clipping(entity: clippingEntity, insertIntoManagedObjectContext: managedObjectContext)
+        clipping.notes = notes
+        clipping.addImage(image)
+        
+        clipping.createdAt = NSDate()
+        
+        managedObjectContext.insertObject(clipping)
+        save()
+        
+        return clipping
+    }
+    
+    
+    func createClipping(notes: String, imageURL: String? = nil) -> Clipping {
         let clippingEntity = NSEntityDescription.entityForName("Clipping", inManagedObjectContext: managedObjectContext)!
         
         let clipping = Clipping(entity: clippingEntity, insertIntoManagedObjectContext: managedObjectContext)
