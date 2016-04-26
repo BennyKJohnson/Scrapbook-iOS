@@ -15,6 +15,11 @@
 		A3D3C7A81CC491A4003350D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3D3C7A61CC491A4003350D9 /* LaunchScreen.storyboard */; };
 		A3D3C7B31CC491A4003350D9 /* ScrapbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3C7B21CC491A4003350D9 /* ScrapbookTests.swift */; };
 		A3D3C7BE1CC491A4003350D9 /* ScrapbookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3C7BD1CC491A4003350D9 /* ScrapbookUITests.swift */; };
+		A3D3C7CF1CC4930A003350D9 /* Clipping+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3C7CB1CC4930A003350D9 /* Clipping+CoreDataProperties.swift */; };
+		A3D3C7D01CC4930A003350D9 /* Clipping.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3C7CC1CC4930A003350D9 /* Clipping.swift */; };
+		A3D3C7D11CC4930A003350D9 /* Collection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3C7CD1CC4930A003350D9 /* Collection+CoreDataProperties.swift */; };
+		A3D3C7D21CC4930A003350D9 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3C7CE1CC4930A003350D9 /* Collection.swift */; };
+		A3D3C7D41CC4934F003350D9 /* Scrapbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3C7D31CC4934F003350D9 /* Scrapbook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		A3D3C7B91CC491A4003350D9 /* ScrapbookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrapbookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D3C7BD1CC491A4003350D9 /* ScrapbookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapbookUITests.swift; sourceTree = "<group>"; };
 		A3D3C7BF1CC491A4003350D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3D3C7CB1CC4930A003350D9 /* Clipping+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Clipping+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A3D3C7CC1CC4930A003350D9 /* Clipping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clipping.swift; sourceTree = "<group>"; };
+		A3D3C7CD1CC4930A003350D9 /* Collection+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A3D3C7CE1CC4930A003350D9 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		A3D3C7D31CC4934F003350D9 /* Scrapbook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scrapbook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,10 @@
 		A3D3C7991CC491A4003350D9 /* Scrapbook */ = {
 			isa = PBXGroup;
 			children = (
+				A3D3C7CB1CC4930A003350D9 /* Clipping+CoreDataProperties.swift */,
+				A3D3C7CC1CC4930A003350D9 /* Clipping.swift */,
+				A3D3C7CD1CC4930A003350D9 /* Collection+CoreDataProperties.swift */,
+				A3D3C7CE1CC4930A003350D9 /* Collection.swift */,
 				A3D3C79A1CC491A4003350D9 /* AppDelegate.swift */,
 				A3D3C79C1CC491A4003350D9 /* ViewController.swift */,
 				A3D3C79E1CC491A4003350D9 /* Main.storyboard */,
@@ -106,6 +120,7 @@
 				A3D3C7A61CC491A4003350D9 /* LaunchScreen.storyboard */,
 				A3D3C7A91CC491A4003350D9 /* Info.plist */,
 				A3D3C7A11CC491A4003350D9 /* Scrapbook.xcdatamodeld */,
+				A3D3C7D31CC4934F003350D9 /* Scrapbook.swift */,
 			);
 			path = Scrapbook;
 			sourceTree = "<group>";
@@ -260,8 +275,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3D3C79D1CC491A4003350D9 /* ViewController.swift in Sources */,
+				A3D3C7D01CC4930A003350D9 /* Clipping.swift in Sources */,
 				A3D3C7A31CC491A4003350D9 /* Scrapbook.xcdatamodeld in Sources */,
+				A3D3C7D11CC4930A003350D9 /* Collection+CoreDataProperties.swift in Sources */,
 				A3D3C79B1CC491A4003350D9 /* AppDelegate.swift in Sources */,
+				A3D3C7D21CC4930A003350D9 /* Collection.swift in Sources */,
+				A3D3C7D41CC4934F003350D9 /* Scrapbook.swift in Sources */,
+				A3D3C7CF1CC4930A003350D9 /* Clipping+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
