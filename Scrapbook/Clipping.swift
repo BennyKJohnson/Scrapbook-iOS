@@ -13,7 +13,7 @@ import CoreData
 class Clipping: NSManagedObject {
     
     lazy var image: UIImage? = {
-        
+       
         if let imageURL = self.imageURL, dir = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first {
             let path = dir.stringByAppendingPathComponent(imageURL)
             
@@ -31,6 +31,8 @@ class Clipping: NSManagedObject {
         }
         return nil
         
+        
+       
     }()
     
     func addImage(image: UIImage) {

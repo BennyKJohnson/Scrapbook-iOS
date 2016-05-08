@@ -74,6 +74,14 @@ class CollectionListViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if indexPath.row == 0 {
+            return false
+        }
+        
+        return true
+    }
+    
     @IBAction func addTapped(sender: UIBarButtonItem) {
         
         // Create Collection
